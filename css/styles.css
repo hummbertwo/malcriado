@@ -1,0 +1,77 @@
+     /* Estilos para centrar el texto */
+     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+     *
+     {
+       margin:0;
+       padding: 0;
+       box-sizing: border-box;
+       font-family: 'Poppins', sans-serif;
+     }
+     body {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       min-height: 100vh;
+       background: #252839;
+       opacity: 80%;
+     }
+     h2 {
+       position: relative;
+       font-size: 3vw;
+       color: #252839;
+       -webkit-text-stroke: 0.1vw #383d52;
+       text-transform: uppercase;
+       opacity: 40%;
+     }
+     h2::before {
+       content: attr(data-text);
+       position: absolute;
+       top: 0;
+       left: 0;
+       width: 0;
+       height: 100%;
+       color: #ffffff;
+       -webkit-text-stroke: 0vw #282829;
+       border-right: 0.2px solid #ffffff;
+       overflow: hidden;
+       animation: animate 6s linear infinite;
+     }
+     @keyframes animate {
+       0%,10%,100% {
+         width: 0;
+       }
+       70%,90%
+       {
+         width: 100%;
+       }
+     }
+     
+
+      /* Estilos para el video */
+      video {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+        transition: 1s opacity;
+        opacity: 40%;
+      }
+      .container {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+     }
+     img{
+        width: 20%; /* o cualquier otro valor en px o % */
+        height: auto;
+     }
+    
